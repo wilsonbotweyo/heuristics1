@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Basic Test",
+      "setup": "sudo -H pip3 install ipykernel jupyterlab matplotlib nose",
+      "run": "jupyter nbconvert --to python AI-Jupyternotebook.ipynb; python AI-Jupyternotebook.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
