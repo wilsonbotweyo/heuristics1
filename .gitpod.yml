@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - command: >
+      sudo service apache2 start &&
+      sudo service mysql start &&
+      sudo mysql -e "CREATE DATABASE guitar_shop;" &&
+      sudo mysql guitar_shop < backend/create_tables.sql &&
+      apachectl -DFOREGROUND
