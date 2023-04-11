@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  /* Add styles for the inventory table */
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .inventory-table th,
+  .inventory-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .inventory-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .inventory-table tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  .inventory-table td:last-child {
+    text-align: center;
+  }
+  

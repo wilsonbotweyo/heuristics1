@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="guitarShopApp">
+
+<head>
+    <title>Ye Olde Guitar Shoppe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body ng-controller="GuitarShopController">
+    <h1>Ye Olde Guitar Shoppe</h1>
+
+    <!-- Input form -->
+    <form>
+        <label for="make">Make:</label>
+        <input type="text" ng-model="formItem.make" />
+        <button ng-click="new()">New</button><br />
+
+        <label for="model">Model:</label>
+        <input type="text" ng-model="formItem.model" /><br />
+
+        <label for="year">Year:</label>
+        <input type="text" ng-model="formItem.year" /><br />
+
+        <label for="color">Color:</label>
+        <input type="text" ng-model="formItem.color" />
+        <button ng-click="insert()" ng-show="hideInsert">Insert</button>
+        <button ng-click="update()" ng-show="!hideInsert">Update</button>
+    </form>
+
+    <hr />
+
+    <!-- Inventory table -->
+    <table class="inventory-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="guitar in inventory">
+                <td>{{guitar.id}}</td>
+                <td>{{guitar.make}}</td>
+                <td>{{guitar.model}}</td>
+                <td>{{guitar.year}}</td>
+                <td>{{guitar.color}}</td>
+                <td>
+                    <button ng-click="edit(guitar.id)">Edit</button>
+                    <button ng-click="delete(guitar.id)">Delete
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
