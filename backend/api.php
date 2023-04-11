@@ -6,9 +6,10 @@ header('Access-Control-Allow-Headers: Content-Type');
 
 // Replace these values with your own database credentials
 $db_host = 'localhost';
-$db_user = 'your_db_user';
-$db_password = 'your_db_password';
-$db_name = 'your_db_name';
+$db_user = 'root';
+$db_password = '';
+$db_name = 'guitar_shop';
+
 
 $connection = new mysqli($db_host, $db_user, $db_password, $db_name);
 
